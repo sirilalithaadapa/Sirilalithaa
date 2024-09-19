@@ -1,0 +1,163 @@
+body,
+html {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    /* Removes scrollbars */
+    height: 100%;
+    /* Ensure the body takes full height */
+}
+
+.home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #F1F3C2, #CEDF9F, #A1D6B2);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Particle container */
+
+.background-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* Particle styles */
+
+.background-particles::before,
+.background-particles::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: particleMove 15s linear infinite;
+}
+
+
+/* Different particles with different sizes, positions, and animation speeds */
+
+.background-particles::before {
+    top: 50%;
+    left: 30%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 12s;
+    animation-delay: -2s;
+}
+
+.background-particles::after {
+    top: 20%;
+    left: 60%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 18s;
+    animation-delay: -3s;
+}
+
+
+/* Particle movement keyframe animation */
+
+@keyframes particleMove {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50vw);
+        opacity: 0;
+    }
+}
+
+.home-title {
+    font-size: 3rem;
+    margin: 0;
+    transition: color 0.5s ease;
+}
+
+.home-title:hover {
+    color: #f1f1f1;
+}
+
+.home-name {
+    font-size: 4rem;
+    margin: 0.5rem 0;
+    transition: transform 0.3s ease;
+}
+
+.home-name:hover {
+    transform: scale(1.05);
+}
+
+.home-subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    letter-spacing: 2px;
+}
+
+.home-socials {
+    margin-top: 20px;
+}
+
+.home-socials a {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home-socials a:hover {
+    transform: scale(1.2);
+    color: #000000;
+}
+
+.scroll-down {
+    margin-top: 40px;
+    font-size: 2rem;
+    color: white;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2rem;
+    }
+    .home-name {
+        font-size: 3rem;
+    }
+    .home-subtitle {
+        font-size: 1.2rem;
+    }
+    .home-socials a {
+        font-size: 1.5rem;
+        margin: 0 8px;
+    }
+    .scroll-down {
+        font-size: 1.5rem;
+    }
+}
