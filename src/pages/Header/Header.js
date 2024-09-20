@@ -23,7 +23,7 @@ function Header() {
                 ),
                 React.createElement(
                     'li', { className: 'nav-item' },
-                    React.createElement(Link, { to: '/portfolio', className: 'nav-link' }, 'Portfolio')
+                    React.createElement(Link, { to: '/projects', className: 'nav-link' }, 'Projects')
                 ),
                 React.createElement(
                     'li', { className: 'nav-item' },
