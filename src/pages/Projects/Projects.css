@@ -1,0 +1,93 @@
+/* General styles */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+/* Projects section styles */
+
+.projects-section {
+    padding: 40px;
+    background-color: #DDE7F2;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+
+/* Grid layout for projects */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+
+/* Project card styling */
+
+.project-card {
+    background: linear-gradient(135deg, #85586F 0%, #DFD3C3 20%, #D0B8A8 50%, #D0B8A8 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Thumbnail image styling */
+
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #434343;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    font-size: 1rem;
+    color: #102C57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    color: #393053;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}
